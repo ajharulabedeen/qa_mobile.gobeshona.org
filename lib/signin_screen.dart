@@ -43,11 +43,11 @@ class _SignInScreenState extends State<SignInScreen> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Login Failed"),
-            content: Text("Please check your username and password"),
+            title: const Text("Login Failed"),
+            content: const Text("Please check your username and password"),
             actions: [
               TextButton(
-                child: Text("OK"),
+                child: const Text("OK"),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -63,7 +63,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign In'),
+        title: const Text('Sign In'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -72,17 +72,17 @@ class _SignInScreenState extends State<SignInScreen> {
           children: <Widget>[
             TextField(
               controller: _usernameController,
-              decoration: InputDecoration(labelText: 'Username'),
+              decoration: const InputDecoration(labelText: 'Username'),
             ),
             TextField(
               controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _signIn,
-              child: Text('Sign In'),
+              child: const Text('Sign In'),
             ),
           ],
         ),
