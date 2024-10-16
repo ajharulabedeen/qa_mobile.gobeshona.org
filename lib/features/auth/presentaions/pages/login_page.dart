@@ -146,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        SizedBox(height: 60.h),
+                                        SizedBox(height: 40.h),
                                         Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -162,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 10.h),
+                                        SizedBox(height: 30.h),
                                         Text(
                                           "User Name",
                                           style: GoogleFonts.notoSansBengali(
