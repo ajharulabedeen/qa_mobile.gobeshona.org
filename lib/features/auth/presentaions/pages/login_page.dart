@@ -1,5 +1,3 @@
-
-
 import 'package:iQA/features/core/path/file_path.dart';
 
 class LoginPage extends StatefulWidget {
@@ -21,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    StatusBar.changeColor(Colors.white,Brightness.dark);
+    StatusBar.changeColor(Colors.white, Brightness.dark);
     context.read<AuthBloc>().add(const AuthEvent.isPasswordObscured());
     super.initState();
   }
@@ -103,6 +101,20 @@ class _LoginPageState extends State<LoginPage> {
                                             fontSize: 24.sp,
                                             color: Colors.white),
                                       ),
+                                      SizedBox(height: 16.h),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "iQA 99.01",
+                                            style: GoogleFonts.notoSansBengali(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 24.sp,
+                                                color: Colors.white),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -135,6 +147,22 @@ class _LoginPageState extends State<LoginPage> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         SizedBox(height: 60.h),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "Sign in to start your session",
+                                              style:
+                                                  GoogleFonts.notoSansBengali(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 16.sp,
+                                                color: const Color(0xffd25268),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 10.h),
                                         Text(
                                           "User Name",
                                           style: GoogleFonts.notoSansBengali(
@@ -428,7 +456,89 @@ class _LoginPageState extends State<LoginPage> {
                                           ),
                                         ),
                                         SizedBox(
-                                          height: 160.h,
+                                          height: 10.h,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                InkWell(
+                                                  onTap: () {
+                                                    //  context.push('/signup');
+                                                  },
+                                                  child: Text(
+                                                    ' Register a new membership',
+                                                    style: TextStyle(
+                                                      color: Colors.blueAccent,
+                                                      fontSize: 14.sp,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ),
+                                               /* SizedBox(
+                                                  width: 4.sp,
+                                                ),*/
+                                              /*  InkWell(
+                                                  onTap: () {
+                                                    // context.push('/forgot-pass-login');
+                                                  },
+                                                  child: Icon(
+                                                    Icons
+                                                        .arrow_forward_ios_rounded,
+                                                    color: Colors.green,
+                                                    size: 14.sp,
+                                                  ),
+                                                )*/
+                                              ],
+                                            ),
+                                            Container(
+                                              height: 10.h,
+                                              width: 2.w,
+                                              color: Colors.redAccent,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                InkWell(
+                                                  onTap: () {
+                                                    // context.push('/forgot-pass-login');
+                                                  },
+                                                  child: Text(
+                                                    'Forgot password?',
+                                                    style: TextStyle(
+                                                      color: Colors.green,
+                                                      fontSize: 14.sp,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 4.sp,
+                                                ),
+                                                InkWell(
+                                                  onTap: () {
+                                                    // context.push('/forgot-pass-login');
+                                                  },
+                                                  child: Icon(
+                                                    Icons
+                                                        .arrow_forward_ios_rounded,
+                                                    color: Colors.white,
+                                                    size: 14.sp,
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 80.h,
                                         ),
                                         Center(
                                           child: SizedBox(
