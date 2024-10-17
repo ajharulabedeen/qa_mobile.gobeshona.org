@@ -14,6 +14,7 @@ class _SignUpPageState extends State<SignUpPage> {
 /*  String username = "";
   String password = "";*/
 
+
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
