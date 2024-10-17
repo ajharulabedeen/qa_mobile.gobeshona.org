@@ -7,6 +7,8 @@ class SignUpPage extends StatefulWidget {
   State<SignUpPage> createState() => _SignUpPageState();
 }
 
+
+
 class _SignUpPageState extends State<SignUpPage> {
   final GlobalKey _formKey = GlobalKey<FormState>(debugLabel: "signup");
   FocusNode userNameFocus = FocusNode();
